@@ -1,12 +1,23 @@
 function formatMessage(message, maxLength) {
-    
-    if (message.length <= maxLength) {
-        console.log(message)
-    } else (message.length > maxLength) {
-        console.log(message + '...')
-    }
-}
+  if (message.length <= maxLength) {
+    return message
+  } else (message.length > maxLength)
+{return message.slice(0, maxLength) + '...' }
+ }
 
+
+
+// function formatMessage(message, maxLength) {
+
+//   let newMessage;
+
+//   newMessage = message.slice(0, maxLength);
+
+//   return newMessage + '...';
+
+// }
+
+// console.log(formatMessage("Curabitur ligula sapien", 3)); // "Curabitur ligula..."
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
 console.log(formatMessage("Curabitur ligula sapien", 23)); // "Curabitur ligula sapien"
